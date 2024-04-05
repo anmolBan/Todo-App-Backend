@@ -7,6 +7,12 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        msg: "Hello World"
+    });
+})
+
 app.get("/todos", async (req, res) => {
     // Do something
 
